@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.UUID;
 
 @Getter
 @Setter
@@ -15,9 +16,9 @@ import java.util.Date;
 public class Quotation {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name="quotation_id")
-    private Long quotationId;
+    private UUID quotationId;
 
     @Column(name="beginning_of_insurance")
     private Date beginningOfInsurance;

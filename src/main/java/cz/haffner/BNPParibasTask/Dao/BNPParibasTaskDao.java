@@ -16,7 +16,7 @@ public class BNPParibasTaskDao {
     private static Logger log = LogManager.getLogger(BNPParibasTaskDao.class);
 
     @PersistenceContext
-    EntityManager entityManager;
+    private EntityManager entityManager;
 
 
     @Transactional

@@ -4,20 +4,20 @@ import cz.haffner.BNPParibasTask.Model.Customer;
 import cz.haffner.BNPParibasTask.Model.Quotation;
 import cz.haffner.BNPParibasTask.Model.Subscription;
 import cz.haffner.BNPParibasTask.Service.BNPParibasTaskService;
+import lombok.RequiredArgsConstructor;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/task-service")
+@RequiredArgsConstructor
 public class TaskRESTController {
 
     private static Logger log = LogManager.getLogger(TaskRESTController.class);
 
-    @Autowired
-    BNPParibasTaskService service;
+    private final BNPParibasTaskService service;
 
 
     @PutMapping(value="/update-customer")

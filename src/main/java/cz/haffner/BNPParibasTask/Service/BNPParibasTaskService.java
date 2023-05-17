@@ -4,14 +4,14 @@ import cz.haffner.BNPParibasTask.Dao.BNPParibasTaskDao;
 import cz.haffner.BNPParibasTask.Model.Customer;
 import cz.haffner.BNPParibasTask.Model.Quotation;
 import cz.haffner.BNPParibasTask.Model.Subscription;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class BNPParibasTaskService {
 
-    @Autowired
-    BNPParibasTaskDao dao;
+    private final BNPParibasTaskDao dao;
 
 
     public void saveQuotation(Quotation quotation) {
